@@ -1,20 +1,16 @@
 import React from 'react';
-
-/* Components */
-import Content from '../components/Content';
 import Header from '../components/Header';
-// import TemperaturePrediction from '../components/TemperaturePrediction';
-// import WeeklyStats from '../components/WeeklyStats';
+import TemperatureWidget from '../components/TemperatureWidget';
 
-function Temperature(){
-    return(
-        <div className="w-screen max-w-screen min-h-screen bg-zinc-50">
+const Temperature = () => {
+  return (
+    <div className="w-screen max-w-screen min-h-screen bg-zinc-50 flex flex-col">
       <Header />
-      <Content />
-      {/* <TemperaturePrediction />
-      <WeeklyStats /> */}
+      <main className="container  px-4 py-8">
+        <TemperatureWidget />
+      </main>
     </div>
-    )
-}
+  );
+};
 
 export default Temperature;
